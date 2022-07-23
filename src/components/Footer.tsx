@@ -46,8 +46,8 @@ const Footer = () => {
         },
         {
             id: "user--003",
-            name: "User",
-            icon: "person"
+            name: "More",
+            icon: "grid"
         }
     ]
 

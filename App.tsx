@@ -7,6 +7,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import SearchScreen from './src/screens/SearchScreen';
 import NewsContextProvider from './src/contexts/NewsContext';
 import SingleScreen from './src/screens/SingleScreen';
+import MoreScreen from './src/screens/MoreScreen';
 
 
 const App = () => {
@@ -32,13 +33,17 @@ const App = () => {
             name: 'Single',
             component: SingleScreen
         },
+        {
+            name: 'More',
+            component: MoreScreen
+        },
     ]
 
     return (
         <TailwindProvider>
             <NewsContextProvider>
                 <NavigationContainer>
-                    <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+                    <Stack.Navigator defaultScreenOptions={{ animation: "default"  }} initialRouteName="Home" screenOptions={{ headerShown: false }}>
                         {screens.map(({component, name}, index) => <Stack.Screen key={`${name}-${index}`} name={name} component={component} />)}
                     </Stack.Navigator>
                 </NavigationContainer>

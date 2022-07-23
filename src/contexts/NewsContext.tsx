@@ -32,7 +32,7 @@ const NewsContextProvider: React.FC<NewsContextProviderProps> = ({ children }) =
             console.log(result.message);
             return
         }
-        setNews(result.articles as any);
+        setNews(result.articles?.filter((item: any) => item.media) as any);
     }
 
     useEffect(() => {
@@ -43,9 +43,9 @@ const NewsContextProvider: React.FC<NewsContextProviderProps> = ({ children }) =
 
 
 
-    // useEffect(() => {
-    //     getNews();
-    // }, []);
+    useEffect(() => {
+        getNews();
+    }, []);
 
 
     useEffect(() => {
