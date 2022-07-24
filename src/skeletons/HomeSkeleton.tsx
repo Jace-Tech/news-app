@@ -1,5 +1,6 @@
-import { View, Text, StatusBar } from 'react-native'
+import { View, Text, StatusBar, FlatList } from 'react-native'
 import React from 'react'
+import NewsCardSkeleton from "./NewsCardSkeleton"
 
 const HomeSkeleton = () => {
     return (
@@ -15,8 +16,10 @@ const HomeSkeleton = () => {
                 </View>
             </View>
 
-            <View className="flex-1">
-                <View className=""></View>
+            <View className="flex-1 p-4">
+                <FlatList data={new Array(3).fill("")} horizontal renderItem={({}) => (
+                    <NewsCardSkeleton />
+                )} />
             </View>
         </View>
     ) 

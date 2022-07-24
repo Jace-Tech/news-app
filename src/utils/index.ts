@@ -13,6 +13,53 @@ const TRAVEL_COLOR = "text-purple-600"
 const MUSIC_COLOR = "text-pink-600"
 const SCIENCE_COLOR = "text-orange-500"
 
+export const categories = [
+    {
+        name: "all",
+        value: ""
+    },
+    {
+        name: "news",
+        value: "news"
+    },
+    {
+        name: "technology",
+        value: "tech"
+    },
+    {
+        name: "sports",
+        value: "sport"
+    },
+    {
+        name: "world",
+        value: "world"
+    },
+    {
+        name: "finance",
+        value: "finance"
+    },
+    {
+        name: "science",
+        value: "science"
+    },
+    {
+        name: "economics",
+        value: "economics"
+    },
+    {
+        name: "travel",
+        value: "travel"
+    },
+    {
+        name: "music",
+        value: "music"
+    },
+    {
+        name: "business",
+        value: "business"
+    }
+] 
+
 interface SubString {
     (str: string, length?: number): string
 }
