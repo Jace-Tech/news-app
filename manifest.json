@@ -1,0 +1,112 @@
+{
+    "ios": {
+        "supportsTablet": true
+    },
+    "web": {
+        "favicon": "./assets/favicon.png"
+    },
+    "icon": "./assets/icon.png",
+    "name": "news-app",
+    "slug": "news-app",
+    "splash": {
+        "image": "./assets/splash.png",
+        "imageUrl": "https://classic-assets.eascdn.net/~assets/4dc203c1f48ad8b1e9734613e88be661",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+    },
+    "android": {
+        "adaptiveIcon": {
+            "backgroundColor": "#FFFFFF",
+            "foregroundImage": "./assets/adaptive-icon.png",
+            "foregroundImageUrl": "https://classic-assets.eascdn.net/~assets/97dae5a0e62ad8551d8a31897b425e63"
+        }
+    },
+    "iconUrl": "https://classic-assets.eascdn.net/~assets/4e3f888fc8475f69fd5fa32f1ad5216a",
+    "locales": {},
+    "updates": {
+        "fallbackToCacheTimeout": 0
+    },
+    "version": "1.0.0",
+    "platforms": [
+        "ios",
+        "android",
+        "web"
+    ],
+    "sdkVersion": "45.0.0",
+    "orientation": "portrait",
+    "dependencies": [
+        "@expo/vector-icons",
+        "@react-navigation/drawer",
+        "@react-navigation/native",
+        "@react-navigation/native-stack",
+        "babel-plugin-inline-dotenv",
+        "dotenv",
+        "expo",
+        "expo-status-bar",
+        "expo-updates",
+        "expo-web-browser",
+        "react",
+        "react-dom",
+        "react-native",
+        "react-native-gesture-handler",
+        "react-native-reanimated",
+        "react-native-safe-area-context",
+        "react-native-screens",
+        "react-native-web",
+        "tailwindcss-react-native"
+    ],
+    "bundledAssets": [
+        "asset_7d40544b395c5949f4646f5e150fe020.png",
+        "asset_cdd04e13d4ec83ff0cd13ec8dabdc341.png",
+        "asset_a132ecc4ba5c1517ff83c0fb321bc7fc.png",
+        "asset_0ea69b5077e7c4696db85dbcba75b0e1.png",
+        "asset_f5b790e2ac193b3d41015edb3551f9b8.png",
+        "asset_5223c8d9b0d08b82a5670fb5f71faf78.png",
+        "asset_3a2ba31570920eeb9b1d217cabe58315.ttf",
+        "asset_31b5ffea3daddc69dd01a1f3d6cf63c5.ttf",
+        "asset_140c53a7643ea949007aa9a282153849.ttf",
+        "asset_a76d309774d33d9856f650bed4292a23.ttf",
+        "asset_b49ae8ab2dbccb02c4d11caaacf09eab.ttf",
+        "asset_b06871f281fee6b241d60582ae9369b9.ttf",
+        "asset_1f77739ca9ff2188b539c36f30ffa2be.ttf",
+        "asset_605ed7926cf39a2ad5ec2d1f9d391d3d.ttf",
+        "asset_3b89dd103490708d19a95adcae52210e.ttf",
+        "asset_e20945d7c929279ef7a6f1db184a4470.ttf",
+        "asset_b3263095df30cb7db78c613e73f9499a.ttf",
+        "asset_b62641afc9ab487008e996a5c5865e56.ttf",
+        "asset_8ef52a15e44481b41e7db3c7eaf9bb83.ttf",
+        "asset_f7c53c47a66934504fcbc7cc164895a7.ttf",
+        "asset_d2285965fe34b05465047401b8595dd0.ttf",
+        "asset_1681f34aaca71b8dfb70756bca331eb2.ttf",
+        "asset_b1ee9db8f2a902b373d189f2c279d81d.png",
+        "asset_a4e0725c66112486cc6f4ab4e0025528.png",
+        "asset_d916e34c419b7246d59efe2dc965ff75.png",
+        "asset_92342ace2ac52e29a7fce51b89c2cbd0.png",
+        "asset_7c519c6f00d65602c16b98bdffddc6f4.png",
+        "asset_ccb993f31c04afbcca02178df04f4170.png",
+        "asset_778ffc9fe8773a878e9c30a6304784de.png",
+        "asset_376d6a4c7f622917c39feb23671ef71d.png",
+        "asset_c79c3606a1cf168006ad3979763c7e0c.png",
+        "asset_02bc1fa7c0313217bde2d65ccbff40c9.png",
+        "asset_35ba0eaec5a4f5ed12ca16fabeae451d.png",
+        "asset_665d9d6a3227c85fcb50f3f86ccad80c.png",
+        "asset_f39b4d4f351495ad948f880253d58943.png",
+        "asset_ddf6610eb512edae2ba722a7212c3ecc.png",
+        "asset_a5e0abbdbd82bc804c2eb86eff046d52.png",
+        "asset_ae74bb20586a731af545e6b00fe14a09.png"
+    ],
+    "currentFullName": "@jace-dev/news-app",
+    "originalFullName": "@jace-dev/news-app",
+    "userInterfaceStyle": "light",
+    "id": "@jace-dev/news-app",
+    "projectId": "f5bf9f0f-79b6-41e4-86ae-aab56e90c0b6",
+    "scopeKey": "@jace-dev/news-app",
+    "releaseId": "4567f897-f363-49b4-be61-cbaf89c3fe36",
+    "revisionId": "1.0.0-r.4Elq6-uQo",
+    "publishedTime": "2022-07-25T18:37:05.547Z",
+    "commitTime": "2022-07-25T18:37:05.590Z",
+    "bundleUrl": "https://classic-assets.eascdn.net/%40jace-dev%2Fnews-app%2F1.0.0%2Fe870e44887c7ff8e927c588b7e4883de-45.0.0-ios.js",
+    "bundleKey": "e870e44887c7ff8e927c588b7e4883de",
+    "releaseChannel": "default",
+    "hostUri": "exp.host/@jace-dev/news-app"
+}
