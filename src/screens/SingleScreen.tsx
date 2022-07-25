@@ -6,12 +6,14 @@ import Layout from '../components/Layout'
 import { Ionicons } from '@expo/vector-icons'
 import { getColor, handleRedirect } from '../utils'
 import Header from '../components/Header'
+import { useSearchContext } from '../contexts/SearchContext'
 
 const SingleScreen = () => {
     const [singleNews, setSingleNews] = useState<any>({})
     const {params} = useRoute()
     const navigation = useNavigation()
     const { news } = useNewContext()
+    const { searchResult } = useSearchContext()
 
     useEffect(() => {
         if(!params) {
@@ -19,10 +21,13 @@ const SingleScreen = () => {
             return
         }
 
-        const oneNews = news.find(news => news._id === params)
+        let oneNews = news.find(news => news._id === params)
         if(!oneNews) {
-            navigation.navigate("Home" as any)
-            return
+            oneNews = searchResult.find(news => news._id === params)
+            if(!oneNews) {
+                navigation.navigate("Home" as any)
+                return
+            }
         }
 
         setSingleNews(oneNews)

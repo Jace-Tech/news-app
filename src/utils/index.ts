@@ -1,6 +1,5 @@
 import * as WebBrowser from 'expo-web-browser';
 
-
 const NEWS_COLOR = "text-blue-400"
 const ENTERTAINMENT_COLOR = "text-purple-600"
 const SPORT_COLOR = "text-gray-500"
@@ -77,14 +76,39 @@ export const handleRedirect = async (url: string) => {
     await WebBrowser.openBrowserAsync(url);
 }
 
-export const handleFormatDate = async (date: string) => {
-    const dateArr = date.split('').join('T')
-    // console.log(dateArr)
-    // const dateObj = new Date(dateArr)
-    // const dateString = dateObj.toLocaleDateString()
+const getSuffix = (day: number) => {
+    let suffix = "th"
 
-    // console.log(dateString)
-    // return dateString
+    if(day === 1 || day === 21 || day === 31) {
+        suffix = "st"
+    } else if(day === 2 || day === 22) {
+        suffix = "nd"
+    }
+    else if(day === 3 || day === 23) {
+        suffix = "rd"
+    }
+    else {
+        suffix = "th"
+    }
+
+    return suffix
+}
+
+// format IOS Date for human readable eg. 23rd, march 2020
+export const formatDate = (date: string): string => {
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    const dateObj = new Date(date)
+    const day = dateObj.getDate()
+    const month = dateObj.getMonth()
+    const year = dateObj.getFullYear()
+    const suffix = getSuffix(day)
+    return `${day}${suffix}, ${months[month]} ${year}`
+}
+
+export const handleFormatDate = (date: string) => {
+    const dateArr = date.split(' ').join('T')
+    const dateObj = new Date(dateArr)
+    return formatDate(dateObj.toISOString())
 }
 
 export const getColor = (topic: string): string=> {

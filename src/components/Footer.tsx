@@ -33,6 +33,7 @@ const Footer = () => {
         name: string,
         icon: string
     }
+    
     const footerLinks: Link[]  = [
         {
             id: "home--001",
@@ -52,7 +53,7 @@ const Footer = () => {
     ]
 
     return (
-        <View className={"align-bottom l-0 p-3 py-1 border-t-gray-300 border-t w-full flex flex-row items-center justify-center"}>
+        <View className={"align-bottom bg-white l-0 p-3 py-1 border-t-gray-300 border-t w-full flex flex-row items-center justify-center"}>
             { footerLinks.map(link => <FooterItem isActive={route.name === link.name} handleClick={() => handleClick(link.name)} key={link.id} {...link} />) }
         </View>
     )

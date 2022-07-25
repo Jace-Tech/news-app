@@ -17,7 +17,6 @@ const MoreScreen = () => {
                     <Pressable onPress={() => goBack()}>
                         <Ionicons name="ios-arrow-back-outline" size={24} />
                     </Pressable>
-                        
                     <Text className="text-xl font-bold ml-3">More News</Text>
                 </View>
 

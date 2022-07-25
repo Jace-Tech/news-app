@@ -11,7 +11,7 @@ import Header from '../components/Header';
 
 
 const HomeScreen = () => {
-    const { news, brandNews, topic } = useNewContext();
+    const { news, brandNews, options: {topic} } = useNewContext();
     const {navigate} = useNavigation();
 
     if(!news?.length) {
@@ -26,7 +26,7 @@ const HomeScreen = () => {
             <View className="w-full h-full">
                 <View className="h-[45%] relative">
                     <View className="absolute top-0 left-0 h-full w-full bg-black z-10 opacity-75" />
-                    <ImageBackground source={{ uri: brandNews?.media }} resizeMode={"cover"} style={{ width: "100%", height: "100%" }}>
+                    <ImageBackground source={brandNews?.media ? { uri: brandNews?.media } : require("../../assets/nopic.png")} resizeMode={"cover"} style={{ width: "100%", height: "100%" }}>
                         <View className="px-5 flex w-full h-full justify-end relative z-40">
                             <Text className={"items-center uppercase justify-center flex rounded-full tracking-wides text-xs font-bold" + ` ${ getColor(topic) }`}>{ topic }</Text>
                             <Text className="text-xl mt-2 text-white font-bold">{ brandNews?.title }</Text>

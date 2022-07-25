@@ -12,8 +12,8 @@ const CategoryItem:React.FC<CategoryItemProps> = ({ isActive, name, value }) => 
     const { setCategory, category } = useSearchContext()
 
     return (
-        <Pressable onPress={() => setCategory(value)} className="p-2">
-            <Text>{ name }</Text>
+        <Pressable onPress={() => setCategory(value)} className={`p-3 pb-2 ${isActive && "border-b-4 border-gray-500"}`}>
+            <Text className={`text-base capitalize text-gray-700 tracking-wide font-bold`}>{ name }</Text>
         </Pressable>
     )
 }
