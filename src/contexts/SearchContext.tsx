@@ -1,6 +1,5 @@
 import React, { createContext, useCallback, useContext, useEffect } from "react"; 
 import { handleSearchNews, NewsParams } from "../api/news";
-import { useNewContext } from "./NewsContext";
 
 
 interface SearchContextProps {
@@ -33,16 +32,18 @@ const SearchContextProvider: React.FC<SearchContextProviderProps> = ({ children 
 
     // Search news
     const handleSearch = useCallback(async () => {
-        setIsLoading(true);
-        const result = await handleSearchNews(searchQuery);
-
-        if("error" in result) {
-            console.log(result.message);
-            return
+        if(searchQuery.query) {
+            setIsLoading(true);
+            const result = await handleSearchNews(searchQuery);
+    
+            if("error" in result) {
+                console.log(result.message);
+                return
+            }
+    
+            setSearchResult(result.articles);
+            setIsLoading(false);
         }
-
-        setSearchResult(result.articles);
-        setIsLoading(false);
     }, [searchResult, searchQuery]);
 
     const setSearchText = (text: string) => {

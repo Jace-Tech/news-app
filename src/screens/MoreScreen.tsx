@@ -1,7 +1,6 @@
 import { View, Text, SafeAreaView, FlatList, Pressable } from 'react-native'
 import React from 'react'
 import Layout from '../components/Layout'
-import Header from '../components/Header'
 import { useNewContext } from '../contexts/NewsContext'
 import MoreNewsCard from '../components/MoreNewsCard'
 import { Ionicons } from '@expo/vector-icons'

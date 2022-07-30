@@ -1,23 +1,21 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext, useState } from "react";
 import { createDrawerNavigator, useDrawerStatus } from "@react-navigation/drawer"
 
-import DrawerComponent from "../screens/Drawer"
+interface DrawerContextProps {
+    isDrawerOpen: boolean
+    setIsDrawerOpen: (isDrawerOpen: boolean) => void
+}
+const DrawerContext = createContext<DrawerContextProps>({} as any);
 
-interface DrawerContextProps {}
-const DrawerContext = createContext({}); 
+interface DrawerContextProviderProps { }
 
-interface DrawerContextProviderProps {} 
+const DrawerContextProvider: React.FC<DrawerContextProviderProps> = ({ children }) => {
+    const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false)
 
-
-const DrawerContextProvider: React.FC<DrawerContextProviderProps> = ({ children }) => { 
-    const Drawer = createDrawerNavigator()
-    return ( 
-        <DrawerContext.Provider value={{}}> 
-            <Drawer.Navigator>
-                <Drawer.Screen name="SideBar" component={DrawerComponent} />
-                {children} 
-            </Drawer.Navigator>
-        </DrawerContext.Provider> 
+    return (
+        <DrawerContext.Provider value={{ isDrawerOpen, setIsDrawerOpen }}>
+            {children}
+        </DrawerContext.Provider>
     )
 }
 

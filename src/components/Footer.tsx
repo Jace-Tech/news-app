@@ -1,5 +1,5 @@
-import { View, Text, Pressable } from 'react-native'
-import React, { useState } from 'react'
+import { View, Pressable } from 'react-native'
+import React from 'react'
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation, useRoute } from '@react-navigation/native';
 

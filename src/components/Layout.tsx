@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import React, { ReactNode } from 'react'
 import Footer from './Footer'
 

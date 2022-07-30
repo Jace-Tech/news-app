@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, FlatList, ActivityIndicator, VirtualizedList } from 'react-native'
+import { View, Text, FlatList, ActivityIndicator } from 'react-native'
 import React from 'react'
 import Layout from '../components/Layout'
 import Header from '../components/Header'

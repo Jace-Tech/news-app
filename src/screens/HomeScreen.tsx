@@ -8,6 +8,7 @@ import NewsCard from '../components/NewsCard';
 import { useNavigation } from '@react-navigation/native';
 import { getColor } from '../utils';
 import Header from '../components/Header';
+import Drawer from './Drawer';
 
 
 const HomeScreen = () => {
@@ -22,6 +23,7 @@ const HomeScreen = () => {
     
     return (
         <Layout>
+            <Drawer />
             <Header />
             <View className="w-full h-full">
                 <View className="h-[45%] relative">
