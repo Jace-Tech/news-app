@@ -8,6 +8,7 @@ import CategoryItem from '../components/CategoryItem'
 import { useSearchContext } from '../contexts/SearchContext'
 import MoreNewsCard from '../components/MoreNewsCard'
 import { useNewContext } from '../contexts/NewsContext'
+import Drawer from './Drawer'
 
 
 
@@ -17,6 +18,7 @@ const SearchScreen = () => {
 
     return (
         <Layout>
+            <Drawer />
             <View className="flex-1 bg-white px-4">
                 <Header dark />
                 <View className="mt-20">

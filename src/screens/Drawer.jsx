@@ -4,10 +4,12 @@ import { useNavigation } from "@react-navigation/native"
 import { useDrawerContext } from '../contexts/DrawerContext'
 import { Feather } from '@expo/vector-icons'
 import {Picker} from "@react-native-picker/picker"
+import { useNewContext } from '../contexts/NewsContext'
 
 
 const Drawer = () => {
     const { isDrawerOpen, setIsDrawerOpen } = useDrawerContext()
+    const { setOptions } = useNewContext()
     const {navigate} = useNavigation()
 
     const links = [
@@ -24,6 +26,8 @@ const Drawer = () => {
             link: "More"
         }
     ]
+
+    const langs =  ["af", "ar", "bg", "bn", "ca","cn", "cs", "cy", "da", "de", "el", "en", "es", "et", "fa", "fi", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "lt", "lv", "mk", "ml", "mr", "ne", "nl", "no", "pa", "pl", "pt", "ro", "ru", "sk", "sl", "so", "sq", "sv", "sw", "ta", "te", "th", "tl", "tr","tw", "uk", "ur", "vi"]
 
     return (
         <>
@@ -44,12 +48,12 @@ const Drawer = () => {
                             )) }
                         </View>
 
-                        <View className="mt-5 px-2">
+                        {/* <View className="mt-5 px-2">
                             <Text className=" font-semibold text-base">Language</Text>
-                            <Picker style={{  }}>
-                                <Picker.Item label="English" value="en" />
+                            <Picker onValueChange={(value) => setOptions(prev => ({...prev, lang: value}))} style={{  }}>
+                                { langs.map((lang, index) => <Picker.Item key={`${lang}-${index}`} label={lang} value={lang} />) }
                             </Picker>
-                        </View>
+                        </View> */}
                     </View>
                 </View>
             )}

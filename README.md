@@ -2,7 +2,7 @@
 
 A simple news app made with React Native Expo. 
 
-Check out the live demo at [News App](https://expo.dev/@jace-dev/news-app?serviceType=classic&distribution=expo-go)
+Check out the live demo at [News App](https://expo.dev/@jace-dev/news-app)
 
 ## Screens
 
